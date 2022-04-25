@@ -5,6 +5,7 @@ public class Tienda {
    nombre- string
     objetos disponibles -arrays<objetos>
 
+
     metodos:
     comprar
     vender

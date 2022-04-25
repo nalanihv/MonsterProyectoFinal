@@ -10,6 +10,7 @@ public class Baya extends Objeto {
          if(velocidad){aumentar 20hp velocidad}
        */
 
+
     public String getEfecto() {
         return efecto;}
     public void setEfecto(String efecto) {

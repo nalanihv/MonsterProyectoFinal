@@ -11,6 +11,7 @@ public class Pocion extends Objeto{
         this.efecto = efecto;}
 
 
+
     public int getDuracion() {
         return duracion;}
     public void setDuracion(int duracion) {

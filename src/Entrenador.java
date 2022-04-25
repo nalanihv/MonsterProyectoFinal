@@ -6,6 +6,7 @@ public class Entrenador extends Personaje{
     pokedex - ArraysList<Pokemon>
     mochila - ArraysList<Objeto>
 
+
     metodos:
     pelear(abstracto implementacion):
        - escoger pokemon del pokedex

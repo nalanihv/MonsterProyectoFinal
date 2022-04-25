@@ -9,6 +9,7 @@ public class Objeto {
     protected String nombre;
     protected String tipo;
 
+
     public double getCosto() {
         return costo;}
     public void setCosto(double costo) {

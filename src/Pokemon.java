@@ -7,6 +7,7 @@ public class Pokemon extends Personaje {
    debilCoantra - string
    fuerte Contra - string
 
+
    pelea :
    consumi pocion o baya para ataque
     habilidad.ataqueBase +20

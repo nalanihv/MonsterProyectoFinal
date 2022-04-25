@@ -8,6 +8,7 @@ public class Habilidad {
     ataqueBase -int
      */
 
+
     public String getNombre() {
         return nombre;}
     public void setNombre(String nombre) {
