@@ -35,10 +35,22 @@ public class Tienda {
     }
 
     public boolean usuarioComprar(double dinero, int cantidad, int indiceObjeto){
-          //objetos disponiblres
-        System.out.println("Los objetos disponibles son: ");
-        for (Objeto objeto:objetosDisponibles) {
-            System.out.println(objeto); //falta toString en objeto
+        if(indiceObjeto>objetosDisponibles.size()){
+            System.out.println("Error no existe ese objeto");
+        }else{
+            if(objetosDisponibles.get(indiceObjeto).cantidad >=cantidad) {
+                double precioTotal=cantidad*objetosDisponibles.get(indiceObjeto).costo;
+                if(precioTotal>=dinero){
+                    System.out.println("vendido");
+                    return true;
+                }else {
+                    System.out.println("No le alcanza, le faltan:" + (precioTotal-dinero));
+                    return false;
+                }
+            }else{
+                System.out.println("No tenemos la cantidad solicitada");
+                return false;
+            }
         }
         /* validad que haya suficientes objetos del tipo requerido :
         cantidad y existe en el arreglo
@@ -54,12 +66,27 @@ public class Tienda {
          */return false;
     }
     public boolean usuarioVender(Objeto objeto, int cantidad){
+        System.out.println(objeto.getClass());
         /*inverso de comprar
         dinero infinito
         recibir objetos y dar el dinero
+        no se compra cuando el usuario quiera vendernos una baya
          */
 
         return false;
+    }
+    public void mostrarDisponibles(){
+        //objetos disponiblres
+        System.out.println("Los objetos disponibles son: ");
+        int indice=1;
+
+        for (Objeto objeto:objetosDisponibles) {
+            System.out.println(indice + " - ");//1 - pocicion vida
+
+            System.out.println(objeto); //falta toString en objeto
+            indice++;
+        }
+
     }
 
 }
