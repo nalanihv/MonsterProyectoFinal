@@ -35,6 +35,11 @@ public class Tienda {
     }
 
     public boolean usuarioComprar(double dinero, int cantidad, int indiceObjeto){
+          //objetos disponiblres
+        System.out.println("Los objetos disponibles son: ");
+        for (Objeto objeto:objetosDisponibles) {
+            System.out.println(objeto); //falta toString en objeto
+        }
         /* validad que haya suficientes objetos del tipo requerido :
         cantidad y existe en el arreglo
         si si
