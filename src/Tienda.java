@@ -5,7 +5,6 @@ public class Tienda {
    nombre- string
     objetos disponibles -arrays<objetos>
 
-
     metodos:
     comprar
     vender
@@ -14,7 +13,28 @@ public class Tienda {
     private String nombre;
     private ArrayList<Objeto>objetosDisponibles;
 
-    public boolean usuarioComprar(double dinero,int cantidad,int indiceObjeto){
+    public String getNombre()
+    {
+        return nombre;}
+    public void setNombre(String nombre)
+    {
+        this.nombre = nombre;}
+
+
+    public ArrayList<Objeto> getObjetosDisponibles()
+    {
+        return objetosDisponibles;}
+    public void setObjetosDisponibles(ArrayList<Objeto> objetosDisponibles)
+    {
+        this.objetosDisponibles = objetosDisponibles;}
+
+
+    public Tienda(String nombre, ArrayList<Objeto> objetosDisponibles) {
+        this.nombre = nombre;
+        this.objetosDisponibles = objetosDisponibles;
+    }
+
+    public boolean usuarioComprar(double dinero, int cantidad, int indiceObjeto){
         /* validad que haya suficientes objetos del tipo requerido :
         cantidad y existe en el arreglo
         si si
