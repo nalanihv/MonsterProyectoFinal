@@ -5,10 +5,9 @@ public class Entrenador extends Personaje{
     private String region; 
     private Pokemon pokemonMascota;
     private int torneosGanados;
-    //ArrayList<Pokemon>pokedex
-    //ArrayList<Objeto>mochila
+    ArrayList<Pokemon>pokedex;
+    ArrayList<Objeto>mochila;
     private double dinero;
-    //constructor falta, getters y setters tambien . 
     /*
     region - string
     pokemonMacota - Pokemon
@@ -16,11 +15,6 @@ public class Entrenador extends Personaje{
     pokedex - ArraysList<Pokemon>
     mochila - ArraysList<Objeto>
      */
-   //private String region;
-    //private Pokemon pokemonMascota;
-   // private int torneosGanados;
-    ArrayList<Pokemon>pokedex;
-    ArrayList<Objeto>mochila;
 
     public String getRegion() {
         return region;}

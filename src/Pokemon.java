@@ -14,7 +14,43 @@ public class Pokemon extends Personaje {
    esLegendario - boolean
    debilCoantra - string
    fuerte Contra - string
+*/
 
+    public String getTipo() {
+        return tipo;}
+    public void setTipo(String tipo) {
+        this.tipo = tipo;}
+
+    public int getHp() {
+        return hp;}
+    public void setHp(int hp) {
+        this.hp = hp;}
+
+    public boolean isEsLegendario() {
+        return esLegendario;}
+    public void setEsLegendario(boolean esLegendario) {
+        this.esLegendario = esLegendario;}
+
+    public String getDebilContra() {
+        return debilContra;}
+    public void setDebilContra(String debilContra) {
+        this.debilContra = debilContra;}
+
+    public String getFuerteContra() {
+        return fuerteContra;}
+    public void setFuerteContra(String fuerteContra) {
+        this.fuerteContra = fuerteContra;}
+
+    public Pokemon(String nombre, int nivel, char genero, String tipo, int hp, boolean esLegendario, String debilContra, String fuerteContra) {
+        super(nombre, nivel, genero);
+        this.tipo = tipo;
+        this.hp = hp;
+        this.esLegendario = esLegendario;
+        this.debilContra = debilContra;
+        this.fuerteContra = fuerteContra;
+    }
+
+    /*
 
    pelea :
    consumi pocion o baya para ataque
@@ -28,7 +64,6 @@ public class Pokemon extends Personaje {
         normal ataque
 
      cuando se lanza el ataque se resta la cantidad de ataque del hp
-
 
 
 
