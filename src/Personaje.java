@@ -18,6 +18,7 @@ public class Personaje {
     public void setGenero(char genero) {
         this.genero = genero;}
 
+
     public Personaje(String nombre, int nivel, char genero) {
         this.nombre = nombre;
         this.nivel = nivel;
