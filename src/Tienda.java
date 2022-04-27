@@ -35,13 +35,16 @@ public class Tienda {
     }
 
     public boolean usuarioComprar(double dinero, int cantidad, int indiceObjeto){
+        
         if(indiceObjeto>objetosDisponibles.size()){
             System.out.println("Error no existe ese objeto");
+            return false;
         }else{
             if(objetosDisponibles.get(indiceObjeto).cantidad >=cantidad) {
                 double precioTotal=cantidad*objetosDisponibles.get(indiceObjeto).costo;
                 if(precioTotal>=dinero){
-                    System.out.println("vendido");
+                    System.out.println("usted esta comprando"+cantidad+" "+objetosDisponibles.get(indiceObjeto).nombre +"por $" +precioTotal);
+                   System.out.println("Su cambio es: "+(dinero-precioTotal);
                     return true;
                 }else {
                     System.out.println("No le alcanza, le faltan:" + (precioTotal-dinero));
