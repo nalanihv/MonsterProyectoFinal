@@ -51,7 +51,7 @@ public class Pokemon extends Personaje {
     }
 
     /*
-
+no hacer todavia
    pelea :
    consumi pocion o baya para ataque
     habilidad.ataqueBase +20
