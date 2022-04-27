@@ -52,7 +52,7 @@ public class Entrenador extends Personaje{
     }
 
     /*
-
+hacer metodo tirar e intercambiar 
     metodos:
     pelear(abstracto implementacion):
        - escoger pokemon del pokedex
@@ -92,12 +92,8 @@ public class Entrenador extends Personaje{
        y con un random true or false acepta
           si( true)
               get y add ( mas remove)
-
-
-
-
-
-
      */
+    
 
+    
 }
