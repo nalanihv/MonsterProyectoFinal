@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Entrenador extends Personaje{
     /*
     region - string
@@ -5,7 +7,47 @@ public class Entrenador extends Personaje{
     torneosGanados- int
     pokedex - ArraysList<Pokemon>
     mochila - ArraysList<Objeto>
+     */
+    private String region;
+    private Pokemon pokemonMascota;
+    private int torneosGanados;
+    ArrayList<Pokemon>pokedex;
+    ArrayList<Objeto>mochila;
 
+    public String getRegion() {
+        return region;}
+    public void setRegion(String region) {
+        this.region = region;}
+
+    public Pokemon getPokemonMascota() {
+        return pokemonMascota;}
+    public void setPokemonMascota(Pokemon pokemonMascota) {
+        this.pokemonMascota = pokemonMascota;}
+
+    public int getTorneosGanados() {
+        return torneosGanados;}
+    public void setTorneosGanados(int torneosGanados) {
+        this.torneosGanados = torneosGanados;}
+
+    public ArrayList<Pokemon> getPokedex() {
+        return pokedex;}
+    public void setPokedex(ArrayList<Pokemon> pokedex) {
+        this.pokedex = pokedex;}
+
+    public ArrayList<Objeto> getMochila() {
+        return mochila;}
+    public void setMochila(ArrayList<Objeto> mochila) {
+        this.mochila = mochila;}
+
+    public Entrenador(String region, Pokemon pokemonMascota, int torneosGanados, ArrayList<Pokemon> pokedex, ArrayList<Objeto> mochila) {
+        this.region = region;
+        this.pokemonMascota = pokemonMascota;
+        this.torneosGanados = torneosGanados;
+        this.pokedex = pokedex;
+        this.mochila = mochila;
+    }
+
+    /*
 
     metodos:
     pelear(abstracto implementacion):
