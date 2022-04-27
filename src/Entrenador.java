@@ -16,11 +16,11 @@ public class Entrenador extends Personaje{
     pokedex - ArraysList<Pokemon>
     mochila - ArraysList<Objeto>
      */
-   /* private String region;
-    private Pokemon pokemonMascota;
-    private int torneosGanados;
+   //private String region;
+    //private Pokemon pokemonMascota;
+   // private int torneosGanados;
     ArrayList<Pokemon>pokedex;
-    ArrayList<Objeto>mochila;*/
+    ArrayList<Objeto>mochila;
 
     public String getRegion() {
         return region;}
@@ -47,10 +47,12 @@ public class Entrenador extends Personaje{
     public void setMochila(ArrayList<Objeto> mochila) {
         this.mochila = mochila;}
 
-    public Entrenador(String region, Pokemon pokemonMascota, int torneosGanados, ArrayList<Pokemon> pokedex, ArrayList<Objeto> mochila) {
+    public Entrenador(String nombre, int nivel, char genero, String region, Pokemon pokemonMascota, int torneosGanados, double dinero, ArrayList<Pokemon> pokedex, ArrayList<Objeto> mochila) {
+        super(nombre, nivel, genero);
         this.region = region;
         this.pokemonMascota = pokemonMascota;
         this.torneosGanados = torneosGanados;
+        this.dinero = dinero;
         this.pokedex = pokedex;
         this.mochila = mochila;
     }

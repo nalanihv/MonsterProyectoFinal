@@ -5,7 +5,7 @@ public class Pokemon extends Personaje {
     private int hp;
     private boolean esLegendario; 
     private String debilContra;
-    private String debilContra;
+    private String fuerteContra;
     //falta geter, setter y constructor
     /* priavate
     tipo string
