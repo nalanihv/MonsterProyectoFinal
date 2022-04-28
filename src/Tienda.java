@@ -70,6 +70,12 @@ public class Tienda {
     }
     public boolean usuarioVender(Objeto objeto, int cantidad){
         System.out.println(objeto.getClass());
+        //usar clase objeto?
+        //if (baya){
+        //return false?} sino continua, recibes los objetos y das el precio.:
+        //recibir strings regresar int. 
+        
+        
         /*inverso de comprar
         dinero infinito
         recibir objetos y dar el dinero
