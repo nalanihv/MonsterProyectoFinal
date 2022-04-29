@@ -70,11 +70,20 @@ public class Tienda {
     }
     public boolean usuarioVender(Objeto objeto, int cantidad){
         System.out.println(objeto.getClass());
-        //usar clase objeto?
-        //if (baya){
-        //return false?} sino continua, recibes los objetos y das el precio.:
-        //recibir strings regresar int. 
-        
+        System.out.println("seleccione un objeto para vender");//como se selecciona?
+         //selecciona
+              //if (baya){
+        //return false?}  //sino continua, recibes los objetos y das el precio.:
+         System.out.println("cantidad:");
+        System.out.println("precio:"); 
+        System.out.println("Vendido ");  
+        //usar clase objeto
+      /*clase objeto tiene: 
+    costo- double
+    cantidad- entero
+    nombre- string
+    tipo- string
+     */
         
         /*inverso de comprar
         dinero infinito
