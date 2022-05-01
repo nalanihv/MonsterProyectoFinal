@@ -70,20 +70,34 @@ public class Entrenador extends Personaje{
 
 
     public void  intercambiar(){
+        boolean prob;
+        int respuesta;
+        Random random = new Random();
+
         //pokedex del otro entrenador? :
         for (int i = 0; i < pokedex.size(); i++) {
             System.out.println(pokedex.get(i));
         }
         //escoje el pokemon
         System.out.println("seleccione un pokemon");
+        respuesta= read.nextInt();
         System.out.println("escoja un pokemon para intercambiar: ");
         for (int i = 0; i < pokedex.size(); i++) { //pokedex del usuario
             System.out.println(pokedex.get(i));
-
+        }
+         respuesta= read.nextInt();
             /*  y con un random true or false acepta
           si( true)
               get y add ( mas remove)
      */
+            prob= random.nextInt(100) > 60;
+            if(prob){
+                pokedex.add(); //?
+                pokedex.remove();
+
+            } else {
+                System.out.println("El entrenador rechazó tu cambio");
+            }
         }
     /*
 hacer metodo tirar e intercambiar 
