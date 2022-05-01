@@ -71,27 +71,36 @@ public class Tienda {
     public boolean usuarioVender(Objeto objeto, int cantidad){
         System.out.println(objeto.getClass());
         System.out.println("seleccione un objeto para vender");//como se selecciona?
-         //selecciona
-              //if (baya){
-        //return false?}  //sino continua, recibes los objetos y das el precio.:
-         System.out.println("cantidad:");
-        System.out.println("precio:"); 
-        System.out.println("Vendido ");  
+        objeto.getNombre();
+        //selecciona
+        //menu o comparacion ?
+        if (objeto.getNombre() == "baya"){ //del cual selecciona 
+            System.out.println("No se puede vender");
+            return false;//return false?}  //sino continua, recibes los objetos y das el precio
+        }
+        else {
+            System.out.println("cantidad:");
+            objeto.getCantidad();
+            System.out.println("precio:");
+            objeto.getCosto();
+            System.out.println("Vendido ");
+            //.add y .remove
+        }
         //usar clase objeto
-      /*clase objeto tiene: 
+      /*clase objeto tiene:
     costo- double
     cantidad- entero
     nombre- string
     tipo- string
      */
-        
+
         /*inverso de comprar
         dinero infinito
         recibir objetos y dar el dinero
         no se compra cuando el usuario quiera vendernos una baya
-         */
+         */?
 
-        return false;
+        return false; 
     }
     public void mostrarDisponibles(){
         //objetos disponiblres
