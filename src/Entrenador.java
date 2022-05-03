@@ -1,4 +1,7 @@
 import java.util.ArrayList;
+import java.util.Random;
+import java.util.Scanner;
+
 
 public class Entrenador extends Personaje{
     
@@ -51,8 +54,8 @@ public class Entrenador extends Personaje{
         this.mochila = mochila;
     }
 
-     public void tirarObjeto(){
-        int respuesta;
+     public boolean tirarObjeto(int indice){
+       /* int respuesta;
         Scanner read= new Scanner(System.in);
 
         for (int i = 0; i <mochila.size() ; i++) {
@@ -65,12 +68,42 @@ public class Entrenador extends Personaje{
              if(respuesta!=0){
                  mochila.remove(respuesta - 1);
              }
-        }while (respuesta !=0);
+        }while (respuesta !=0);*/
+         if(indice>mochila.size()-1){
+             return false;
+         }else {
+             mochila.remove(indice);
+             return true;
+         }
+
     }
 
 
-    public void  intercambiar(){
-        boolean prob;
+    public boolean intercambiar(ArrayList<Pokemon> mochilaOpuesto){
+        System.out.println("Los objrtos disponibles son: ");
+        int indice=1;
+        for (Pokemon pokemon:mochilaOpuesto) {
+            System.out.println(indice +" - ");
+            System.out.println(pokemon);
+            indice++;
+        }
+       Scanner scanner=new Scanner(System.in);
+        System.out.println("Ecoger pokemon opuesto: ");
+        int escogidoOp=scanner.nextInt()-1;
+
+        int escogidoM=scanner.nextInt();
+        System.out.println("Intercambiar por: "+ pokedex.get(escogidoM));
+        boolean acepta=false;
+        Random random = new Random();
+        int valor=random.nextInt();
+        acepta=(valor==1);
+        if (acepta){
+            Pokemon aux=pokedex.get(escogidoM);
+            //pokedex.set(escogidoM,pokedex.)
+        }
+        //operador ternario: asigna valor dependiendo de una condicion
+
+      /*  boolean prob;
         int respuesta;
         Random random = new Random();
 
@@ -89,15 +122,16 @@ public class Entrenador extends Personaje{
             /*  y con un random true or false acepta
           si( true)
               get y add ( mas remove)
-     */
+
             prob= random.nextInt(100) > 60;
             if(prob){
-                pokedex.add(); //?
-                pokedex.remove();
+               // pokedex.add(); //?
+               // pokedex.remove();
 
             } else {
                 System.out.println("El entrenador rechazó tu cambio");
-            }
+            } */
+            return false;
         }
     /*
 hacer metodo tirar e intercambiar 
