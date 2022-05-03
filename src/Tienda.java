@@ -75,18 +75,22 @@ public class Tienda {
         objeto.getNombre();
         //selecciona
         //menu o comparacion ?
-        if (objeto.getClass().equals(Baya.class)){ //del cual selecciona
+        
+        
+        if (objeto.getClass().equals(Baya.class)){ 
             System.out.println("No se puede comprar");
-            return false;//sino continua, recibes los objetos y das el precio
-        }
-        else {
+            return false;//sino continua
+        }else{
             for (Objeto elemento:objetosDisponibles) {
                 if(elemento.nombre.equals(objeto.nombre)){
                     elemento.cantidad += cantidad;
-
+                    System.out.println("Comprando objeto existente");
+                    return false;
                 }
-
             }
+             objetosDisponibles.add(objeto);
+             objetosDisponibles.get( objetosDisponibles.size()-1).cantidad =cantidad; 
+            System.out.println("Comprando objeto nuevo");
            /* int cantidadF=objeto.getCantidad()-cantidad;
             System.out.println("cantidad:"+cantidadF);
             //objeto.getCantidad();
@@ -95,7 +99,7 @@ public class Tienda {
             objeto.getCosto();
             System.out.println("Vendido ");
             //.add y .remove?*/
-            return false; 
+            return true; 
         }
         //usar clase objeto
       /*clase objeto tiene:
