@@ -68,23 +68,27 @@ public class Tienda {
 
          */return false;
     }
+                                      
     public boolean usuarioVender(Objeto objeto, int cantidad){
         System.out.println(objeto.getClass());
         System.out.println("seleccione un objeto para vender");//como se selecciona?
         objeto.getNombre();
         //selecciona
         //menu o comparacion ?
-        if (objeto.getNombre() == "baya"){ //del cual selecciona 
+        if (objeto.getCass()==baya.class){ //del cual selecciona 
             System.out.println("No se puede vender");
-            return false;//return false?}  //sino continua, recibes los objetos y das el precio
+            return false;//return false?  //sino continua, recibes los objetos y das el precio
         }
-        else {
-            System.out.println("cantidad:");
-            objeto.getCantidad();
+        else { //
+            int cantidadF=objeto.getCantidad()-cantidad;
+            System.out.println("cantidad:"+cantidadF);
+            //objeto.getCantidad();
+            
             System.out.println("precio:");
             objeto.getCosto();
             System.out.println("Vendido ");
-            //.add y .remove
+            //.add y .remove?
+            return false; 
         }
         //usar clase objeto
       /*clase objeto tiene:
