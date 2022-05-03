@@ -44,7 +44,7 @@ public class Tienda {
                 double precioTotal=cantidad*objetosDisponibles.get(indiceObjeto).costo;
                 if(precioTotal>=dinero){
                     System.out.println("usted esta comprando"+cantidad+" "+objetosDisponibles.get(indiceObjeto).nombre +"por $" +precioTotal);
-                   System.out.println("Su cambio es: "+(dinero-precioTotal));
+                   System.out.println("Su cambio es: "+(dinero-precioTotal);
                     return true;
                 }else {
                     System.out.println("No le alcanza, le faltan:" + (precioTotal-dinero));
@@ -66,18 +66,45 @@ public class Tienda {
         se repite la pregunta
 
 
-         */
+         */return false;
     }
+                                      
     public boolean usuarioVender(Objeto objeto, int cantidad){
         System.out.println(objeto.getClass());
+        System.out.println("seleccione un objeto para vender");//como se selecciona?
+        objeto.getNombre();
+        //selecciona
+        //menu o comparacion ?
+        if (objeto.getCass()==baya.class){ //del cual selecciona 
+            System.out.println("No se puede vender");
+            return false;//return false?  //sino continua, recibes los objetos y das el precio
+        }
+        else { //
+            int cantidadF=objeto.getCantidad()-cantidad;
+            System.out.println("cantidad:"+cantidadF);
+            //objeto.getCantidad();
+            
+            System.out.println("precio:");
+            objeto.getCosto();
+            System.out.println("Vendido ");
+            //.add y .remove?
+            return false; 
+        }
+        //usar clase objeto
+      /*clase objeto tiene:
+    costo- double
+    cantidad- entero
+    nombre- string
+    tipo- string
+     */
 
         /*inverso de comprar
         dinero infinito
         recibir objetos y dar el dinero
         no se compra cuando el usuario quiera vendernos una baya
-         */
+         */?
 
-        return false;
+        return false; 
     }
     public void mostrarDisponibles(){
         //objetos disponiblres

@@ -51,8 +51,56 @@ public class Entrenador extends Personaje{
         this.mochila = mochila;
     }
 
-    /*
+     public void tirarObjeto(){
+        int respuesta;
+        Scanner read= new Scanner(System.in);
 
+        for (int i = 0; i <mochila.size() ; i++) {
+            System.out.println(i+1 +"- "+ mochila.get(i));
+        }
+        System.out.println("Elija el objeto a tirar, si ya no desea tirar escriba :0");
+        do {
+            respuesta=1;
+             respuesta= read.nextInt();
+             if(respuesta!=0){
+                 mochila.remove(respuesta - 1);
+             }
+        }while (respuesta !=0);
+    }
+
+
+    public void  intercambiar(){
+        boolean prob;
+        int respuesta;
+        Random random = new Random();
+
+        //pokedex del otro entrenador? :
+        for (int i = 0; i < pokedex.size(); i++) {
+            System.out.println(pokedex.get(i));
+        }
+        //escoje el pokemon
+        System.out.println("seleccione un pokemon");
+        respuesta= read.nextInt();
+        System.out.println("escoja un pokemon para intercambiar: ");
+        for (int i = 0; i < pokedex.size(); i++) { //pokedex del usuario
+            System.out.println(pokedex.get(i));
+        }
+         respuesta= read.nextInt();
+            /*  y con un random true or false acepta
+          si( true)
+              get y add ( mas remove)
+     */
+            prob= random.nextInt(100) > 60;
+            if(prob){
+                pokedex.add(); //?
+                pokedex.remove();
+
+            } else {
+                System.out.println("El entrenador rechazó tu cambio");
+            }
+        }
+    /*
+hacer metodo tirar e intercambiar 
     metodos:
     pelear(abstracto implementacion):
        - escoger pokemon del pokedex
@@ -92,12 +140,8 @@ public class Entrenador extends Personaje{
        y con un random true or false acepta
           si( true)
               get y add ( mas remove)
-
-
-
-
-
-
      */
+    
 
+    
 }
