@@ -44,7 +44,7 @@ public class Tienda {
                 double precioTotal=cantidad*objetosDisponibles.get(indiceObjeto).costo;
                 if(precioTotal>=dinero){
                     System.out.println("usted esta comprando"+cantidad+" "+objetosDisponibles.get(indiceObjeto).nombre +"por $" +precioTotal);
-                   System.out.println("Su cambio es: "+(dinero-precioTotal);
+                   System.out.println("Su cambio es: "+(dinero-precioTotal));
                     return true;
                 }else {
                     System.out.println("No le alcanza, le faltan:" + (precioTotal-dinero));
@@ -66,10 +66,11 @@ public class Tienda {
         se repite la pregunta
 
 
-         */return false;
+         */
     }
     public boolean usuarioVender(Objeto objeto, int cantidad){
         System.out.println(objeto.getClass());
+
         /*inverso de comprar
         dinero infinito
         recibir objetos y dar el dinero
