@@ -23,6 +23,22 @@ public class Pocion extends Objeto{
         this.duracion = duracion;
     }
 
+    @Override
+    public boolean usar(Pokemon pokemon) {
+        if (this.efecto.equals("curacion"));{
+            pokemon.setHp(pokemon.getHp()+20);
+            return true;
+        } else if(this.efecto.equals("fuerza")){
+            pokemon.setFuerza(pokemon.getFuerza()+20);
+            return true;
+        }else if(this.efecto.equals("velocidad")){
+            pokemon.setVelocidad(pokemon.getVelocidad()+20);
+            return true;
+        }else{
+            return false;
+        }
+    }
+
     //usar
       /* if(curacion){aumentar 20hp}
          if(fuerza){ aumentar ataque 20hp}
