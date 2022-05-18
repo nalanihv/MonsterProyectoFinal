@@ -13,21 +13,15 @@ public class Tienda {
     private String nombre;
     private ArrayList<Objeto>objetosDisponibles;
 
-    public String getNombre()
-    {
+    public String getNombre() {
         return nombre;}
-    public void setNombre(String nombre)
-    {
+    public void setNombre(String nombre) {
         this.nombre = nombre;}
 
-
-    public ArrayList<Objeto> getObjetosDisponibles()
-    {
+    public ArrayList<Objeto> getObjetosDisponibles() {
         return objetosDisponibles;}
-    public void setObjetosDisponibles(ArrayList<Objeto> objetosDisponibles)
-    {
+    public void setObjetosDisponibles(ArrayList<Objeto> objetosDisponibles) {
         this.objetosDisponibles = objetosDisponibles;}
-
 
     public Tienda(String nombre, ArrayList<Objeto> objetosDisponibles) {
         this.nombre = nombre;
@@ -112,6 +106,7 @@ public class Tienda {
          */
 
     }
+
     public void mostrarDisponibles(){
         //objetos disponiblres
         System.out.println("Los objetos disponibles son: ");

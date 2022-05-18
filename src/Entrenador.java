@@ -53,7 +53,20 @@ public class Entrenador extends Personaje{
         this.pokedex = pokedex;
         this.mochila = mochila;
     }
+ /*
+metodo:
+     tirar objeto :
+      mostrar los elementos en mochila
+      que usuario escoja cual tirar
 
+    intercambiar:
+       entrenado opuesto muestra pokedex
+       escojo el pokemon que quiero
+       le propongo uno de mi pokedex
+       y con un random true or false acepta
+          si( true)
+              get y add ( mas remove)
+     */
      public boolean tirarObjeto(int indice){
        /* int respuesta;
         Scanner read= new Scanner(System.in);
@@ -75,9 +88,7 @@ public class Entrenador extends Personaje{
              mochila.remove(indice);
              return true;
          }
-
     }
-
 
     public boolean intercambiar(ArrayList<Pokemon> mochilaOpuesto){
         System.out.println("Los objrtos disponibles son: ");
@@ -102,7 +113,6 @@ public class Entrenador extends Personaje{
             //pokedex.set(escogidoM,pokedex.)
         }
         //operador ternario: asigna valor dependiendo de una condicion
-
       /*  boolean prob;
         int respuesta;
         Random random = new Random();
@@ -133,9 +143,18 @@ public class Entrenador extends Personaje{
             } */
             return false;
         }
+
+    @Override
+    public boolean pelear(Pokemon pokemonContrario) {
+        /*escojer pokemones para pelear
+         */
+        ArrayList<Pokemon>paraPelea=new ArrayList<>();
+        //mostra pokedex, usuario escoje 3 y agregan a paraPelear
+
+        return false;
+    }
     /*
-hacer metodo tirar e intercambiar 
-    metodos:
+    metodo:
     pelear(abstracto implementacion):
        - escoger pokemon del pokedex
              si( su HP es superior 15) y su atributo fuerte coincide con el pokemon a pelear
@@ -162,19 +181,8 @@ hacer metodo tirar e intercambiar
                        nivel 1  >10xp  (pokemon y entrenador los dos)
                        nivel n+1> 10sp *1.5
         perder>(metodo)  yo me quedo sin pokemones
+        */
 
-     tirar objeto :
-      mostrar los elementos en mochila
-      que usuario escoja cual tirar
-
-    intercambiar:
-       entrenado opuesto muestra pokedex
-       escojo el pokemon que quiero
-       le propongo uno de mi pokedex
-       y con un random true or false acepta
-          si( true)
-              get y add ( mas remove)
-     */
     
 
     

@@ -8,7 +8,6 @@ public class Pokemon extends Personaje {
     private String fuerteContra;
     private int fuerza;
     private int velocidad;
-    //falta geter, setter y constructor
     /* priavate
     tipo string
     habilidad- habilidad
@@ -68,6 +67,11 @@ public class Pokemon extends Personaje {
         this.fuerteContra = fuerteContra;
         this.fuerza = fuerza;
         this.velocidad = velocidad;
+    }
+
+    @Override
+    public boolean pelear(Pokemon pokemon) {
+        return false;
     }
 
     /*

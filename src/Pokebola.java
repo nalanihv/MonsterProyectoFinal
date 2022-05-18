@@ -24,7 +24,7 @@ public class Pokebola extends Objeto{
         }
 
     }
-
+//agregar toString a todas las clases
     /*if(pokemon ==legendario){efectividad=-40}
     hacer random del 1-1000
     if( se obtiene un nuero entre 1 y la efectividad que lo atrape y restamos pokebola)

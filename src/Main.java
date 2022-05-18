@@ -10,5 +10,6 @@ public class Main {
         System.out.println(miTienda.usuarioComprar(30.3,1,0));
         miTienda.usuarioVender(pocion1,4);
 
+        //agregar tostring a las clases
     }
 }

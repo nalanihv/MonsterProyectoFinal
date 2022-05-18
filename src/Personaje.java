@@ -1,4 +1,4 @@
-public class Personaje {
+public abstract class Personaje {
     protected String nombre;
     protected int nivel;
     protected char genero;
@@ -24,7 +24,7 @@ public class Personaje {
         this.nivel = nivel;
         this.genero = genero;
     }
-
+public abstract boolean pelear(Pokemon pokemon);
 //getter, setter y contructor falta
     //nombre - string protected
     //nivel- int protected
