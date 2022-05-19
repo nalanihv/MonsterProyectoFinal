@@ -142,20 +142,30 @@ metodo:
                 System.out.println("El entrenador rechazó tu cambio");
             } */
             return false;
+          public void mostrarMochila(){
+          System.out.println("Los objetos disponibles son: ");
+              int indice=1;
+              for(Objeto objeto: mochila){
+                  System.out.println(indice+" . ");
+                  System.out.println(objeto);
+                  indice++
+          }
         }
         public void mostrarPokedex(ArrayList<Pokemon>pokemones){
             System.out.println("Los pokes disponibles son: ");
-
-
+            int indice=1;
+            for(Pokemon objeto: Pokemones){
+                 System.out.println(indice+" . ");
+                 System.out.println(objeto);
+                indice++;
+            }
         }
-        public void mostrarMochila(){}
-
     @Override
     public boolean pelear(Pokemon pokemonContrario) {
         /*escojer pokemones para pelear
          */
         ArrayList<Pokemon>paraPelea=new ArrayList<>();
-       mostrarPokedex(pokedex);
+        mostrarPokedex(pokedex);
         System.out.println("Escoge 3 pokemones");
         Scanner scanner=new Scanner(System.in);
         for (int i = 0; i <3 ; i++) {
@@ -169,13 +179,18 @@ metodo:
             System.out.println("2. usar baya/pocion");
             System.out.println("3. huir");
             respuesta=scanner.nextInt();
+            if(paraPelea.size()!=0){
             if (respuesta==1){
                 System.out.println("escoge el pokemon para pelear");
                 mostrarPokedex(paraPelea);
-                int eleccion=scanner.nextInt();
-                paraPelea.get(eleccion).pelear(pokemonContrario);
-
+                int eleccion=scanner.nextInt(); //validar
+              if(!paraPelea.get(eleccion).pelear(pokemonContrario){
+              paraPelea.remove(eleccion);
+              }else{
+                  return true; 
+              }
             } else if ((respuesta==2)){
+                mostrarMochila();
                 System.out.println("Escoge la baya/pocion para el pokemon ");
                 int eleccion=scanner.nextInt();
 
@@ -185,8 +200,11 @@ metodo:
             } else{
                 System.out.println("Huyendo...");
                 return false;
-
             }
+                 }else{
+                     return false; 
+                 }
+                
         }while (respuesta!=0);
 
 
