@@ -95,4 +95,18 @@ no hacer todavia
      */
 
     //poner to string
+
+    @Override
+    public String toString() {
+        return "Pokemon{" +
+                "tipo='" + tipo + '\'' +
+                ", habilidad=" + habilidad +
+                ", hp=" + hp +
+                ", esLegendario=" + esLegendario +
+                ", debilContra='" + debilContra + '\'' +
+                ", fuerteContra='" + fuerteContra + '\'' +
+                ", fuerza=" + fuerza +
+                ", velocidad=" + velocidad +
+                '}';
+    }
 }

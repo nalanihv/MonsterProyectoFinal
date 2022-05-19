@@ -31,5 +31,10 @@ public class Pokebola extends Objeto{
     else(intenta otra vez hasta que se acaben las pokebolas o ya no queira intentar)
      */
 
-
+    @Override
+    public String toString() {
+        return "Pokebola{" +
+                "efectividad=" + efectividad +
+                '}';
+    }
 }
