@@ -27,8 +27,8 @@ public class Pocion extends Objeto{
     public boolean usar(Pokemon pokemon) {
         if (this.efecto.equals("curacion"));{
             pokemon.setHp(pokemon.getHp()+20);
-            return true;
-        } else if(this.efecto.equals("fuerza")){
+            return true;}
+        else if(this.efecto.equals("fuerza")){
             pokemon.getHabilidad().setAtaqueBase(pokemon.getHabilidad().getAtaqueBase()+20);
             return true;
         }else if(this.efecto.equals("velocidad")){

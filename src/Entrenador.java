@@ -67,7 +67,8 @@ metodo:
           si( true)
               get y add ( mas remove)
      */
-     public boolean tirarObjeto(int indice){
+
+    public boolean tirarObjeto(int indice){
        /* int respuesta;
         Scanner read= new Scanner(System.in);
 
@@ -89,7 +90,6 @@ metodo:
              return true;
          }
     }
-
     public boolean intercambiar(ArrayList<Pokemon> mochilaOpuesto){
         System.out.println("Los objrtos disponibles son: ");
         int indice=1;
@@ -143,13 +143,52 @@ metodo:
             } */
             return false;
         }
+        public void mostrarPokedex(ArrayList<Pokemon>pokemones){
+            System.out.println("Los pokes disponibles son: ");
+
+
+        }
+        public void mostrarMochila(){}
 
     @Override
     public boolean pelear(Pokemon pokemonContrario) {
         /*escojer pokemones para pelear
          */
         ArrayList<Pokemon>paraPelea=new ArrayList<>();
+       mostrarPokedex(pokedex);
+        System.out.println("Escoge 3 pokemones");
+        Scanner scanner=new Scanner(System.in);
+        for (int i = 0; i <3 ; i++) {
+            System.out.println("ingresa el pokemon");
+            paraPelea.add(pokedex.get(scanner.nextInt()-1));
+        }
         //mostra pokedex, usuario escoje 3 y agregan a paraPelear
+        int respuesta=0;
+        do{
+            System.out.println("1 pelear");
+            System.out.println("2. usar baya/pocion");
+            System.out.println("3. huir");
+            respuesta=scanner.nextInt();
+            if (respuesta==1){
+                System.out.println("escoge el pokemon para pelear");
+                mostrarPokedex(paraPelea);
+                int eleccion=scanner.nextInt();
+                paraPelea.get(eleccion).pelear(pokemonContrario);
+
+            } else if ((respuesta==2)){
+                System.out.println("Escoge la baya/pocion para el pokemon ");
+                int eleccion=scanner.nextInt();
+
+                System.out.println("Escoge el pokemon para dar baya/pocion");
+                mostrarPokedex(paraPelea);
+                mochila.get(eleccion-1).usar(paraPelea.get(scanner.nextInt()));
+            } else{
+                System.out.println("Huyendo...");
+                return false;
+
+            }
+        }while (respuesta!=0);
+
 
         return false;
     }

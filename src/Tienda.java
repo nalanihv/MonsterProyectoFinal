@@ -115,7 +115,7 @@ public class Tienda {
         for (Objeto objeto:objetosDisponibles) {
             System.out.println(indice + " - ");//1 - pocicion vida
 
-            System.out.println(objeto); //falta toString en objeto
+            System.out.println(objeto);
             indice++;
         }
 
