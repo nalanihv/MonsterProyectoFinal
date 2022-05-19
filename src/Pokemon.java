@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Pokemon extends Personaje {
     
     private String tipo; 
@@ -71,11 +73,22 @@ public class Pokemon extends Personaje {
 
     @Override
     public boolean pelear(Pokemon pokemon) {
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Escoge la baya/pocion para el pokemon ");
+        int eleccion=scanner.nextInt();
+        habilidad.getAtaqueBase();
+        if (){
+
+        }else if (){
+
+        }else if (){
+
+        }
         return false;
     }
 
+
     /*
-no hacer todavia
    pelea :
    consumi pocion o baya para ataque
     habilidad.ataqueBase +20
@@ -95,4 +108,18 @@ no hacer todavia
      */
 
     //poner to string
+
+    @Override
+    public String toString() {
+        return "Pokemon{" +
+                "tipo='" + tipo + '\'' +
+                ", habilidad=" + habilidad +
+                ", hp=" + hp +
+                ", esLegendario=" + esLegendario +
+                ", debilContra='" + debilContra + '\'' +
+                ", fuerteContra='" + fuerteContra + '\'' +
+                ", fuerza=" + fuerza +
+                ", velocidad=" + velocidad +
+                '}';
+    }
 }
