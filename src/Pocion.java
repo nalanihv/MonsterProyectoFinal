@@ -48,4 +48,11 @@ public class Pocion extends Objeto{
          if(velocidad){aumentar 20hp velocidad}
        */
 
+    @Override
+    public String toString() {
+        return "Pocion{" +
+                "efecto='" + efecto + '\'' +
+                ", duracion=" + duracion +
+                '}';
+    }
 }
