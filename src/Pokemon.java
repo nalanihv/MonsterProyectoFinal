@@ -77,6 +77,14 @@ public class Pokemon extends Personaje {
         if(pokemon.getFuerteContra().equals(false){
             this.habilidad.getAtaqueBase();
             return false;
+        }
+        pokemon.getHabilidad().getNombre();
+        //pokemon.isEsLegendario();
+        if (pokemon.getVelocidad()>pokemon.getVelocidad()){
+
+        }
+        if (pokemon.getHp()>0){
+
         }*/
 
 
