@@ -9,6 +9,7 @@ public class Habilidad {
      */
 
 
+
     public String getNombre() {
         return nombre;}
     public void setNombre(String nombre) {

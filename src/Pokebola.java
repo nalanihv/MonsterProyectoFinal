@@ -10,6 +10,7 @@ public class Pokebola extends Objeto{
         this.efectividad = efectividad;
     }
 
+
     @Override
     public boolean usar(Pokemon pokemon) {
         if(pokemon.isEsLegendario()){
