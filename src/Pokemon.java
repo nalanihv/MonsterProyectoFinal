@@ -69,6 +69,7 @@ public class Pokemon extends Personaje {
         this.velocidad = velocidad;
     }
 
+
     @Override
     public boolean pelear(Pokemon pokemon) {
         return false;
