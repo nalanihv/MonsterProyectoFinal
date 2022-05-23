@@ -33,3 +33,4 @@ public abstract boolean pelear(Pokemon pokemon);
     //metodos: pelear- abstracto
 }
 
+

@@ -195,6 +195,7 @@ metodo:
         return false;
     }
     /*
+
     metodo:
     pelear(abstracto implementacion):
        - escoger pokemon del pokedex

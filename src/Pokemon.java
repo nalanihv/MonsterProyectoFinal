@@ -70,6 +70,7 @@ public class Pokemon extends Personaje {
     }
 
 
+
     @Override
     public boolean pelear(Pokemon pokemon) {
         return false;

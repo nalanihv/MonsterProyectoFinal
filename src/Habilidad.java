@@ -33,4 +33,5 @@ public class Habilidad {
         this.descripcion = descripcion;
         this.ataqueBase = ataqueBase;
     }
+
 }

@@ -39,6 +39,7 @@ public class Pocion extends Objeto{
         }
     }
 
+
     //usar
       /* if(curacion){aumentar 20hp}
          if(fuerza){ aumentar ataque 20hp}

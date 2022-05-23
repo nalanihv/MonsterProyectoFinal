@@ -50,4 +50,5 @@ public abstract class Objeto {
     }
     //usar
     public abstract boolean usar(Pokemon pokemon);
+
 }
