@@ -73,7 +73,11 @@ public class Pokemon extends Personaje {
 
     @Override
     public boolean pelear(Pokemon pokemon) {
-
+        /*
+        if(pokemon.getFuerteContra().equals(false){
+            this.habilidad.getAtaqueBase();
+            return false;
+        }*/
 
 
 
