@@ -30,7 +30,7 @@ public class Baya extends Objeto {
 
     @Override
     public boolean usar(Pokemon pokemon) {
-        if (this.efecto.equals("curacion"));{
+        if (this.efecto.equals("curacion")){
             pokemon.setHp(pokemon.getHp()+20);
             return true;
         } else if(this.efecto.equals("fuerza")){
