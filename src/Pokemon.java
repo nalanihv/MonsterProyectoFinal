@@ -72,22 +72,27 @@ public class Pokemon extends Personaje {
     }
 
     @Override
+
+
+
+
     public boolean pelear(Pokemon pokemon) {
         Scanner scanner=new Scanner(System.in);
         System.out.println("Escoge la baya/pocion para el pokemon ");
         int eleccion=scanner.nextInt();
         habilidad.getAtaqueBase();
-        if (){
+        if (pokemon.getFuerteContra(eleccion)==true){
+            int i = habilidad.getAtaqueBase() + 20;
+            pokemon.hp-Math.random(100);
 
-        }else if (){
-
-        }else if (){
+        }else if (pokemon.getDebilContra(eleccion)==true){
+            int i = habilidad.getAtaqueBase() - 20;
+            pokemon.getHp()-Math.random(100);
+        }else{
 
         }
         return false;
     }
-
-
     /*
    pelea :
    consumi pocion o baya para ataque
