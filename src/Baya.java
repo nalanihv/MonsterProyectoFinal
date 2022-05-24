@@ -45,4 +45,12 @@ public class Baya extends Objeto {
 
 
     }
+
+    @Override
+    public String toString() {
+        return "Baya{" +
+                "efecto='" + efecto + '\'' +
+                ", duracion=" + duracion +
+                '}';
+    }
 }

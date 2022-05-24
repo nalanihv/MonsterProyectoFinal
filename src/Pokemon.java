@@ -73,23 +73,34 @@ public class Pokemon extends Personaje {
 
     @Override
     public boolean pelear(Pokemon pokemon) {
-        /*
-        if(pokemon.getFuerteContra().equals(false){
+       int ataque;
+
+        if(pokemon.fuerteContra ==pokemon.tipo){
             this.habilidad.getAtaqueBase();
-            return false;
+            pokemon.getHabilidad().getNombre();
+        }else if (pokemon.getFuerteContra().equals("")){//fuerte
+             ataque=20;
+            this.habilidad.getAtaqueBase();//+20
+            double v = pokemon.getHp() - Math.random();
+        } else if (pokemon.getDebilContra().equals("fuego")){//debil
+            ataque=-20;
+            this.habilidad.getAtaqueBase();//-20
         }
-        pokemon.getHabilidad().getNombre();
-        //pokemon.isEsLegendario();
-        if (pokemon.getVelocidad()>pokemon.getVelocidad()){
+        do{
+        if(pokemon.hp>pokemon.getHp()){
+            Math.random();
+            pokemon.getHabilidad().getAtaqueBase();
+            pokemon.setHp(this.getHp()+20);
+            this.setHp(this.getHp()-20);
+
 
         }
-        if (pokemon.getHp()>0){
-
-        }*/
 
 
 
         return false;
+    }while (pokemon.getHp()<0);
+
     }
 
     /*

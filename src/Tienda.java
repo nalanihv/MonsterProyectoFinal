@@ -107,6 +107,14 @@ public class Tienda {
 
     }
 
+    @Override
+    public String toString() {
+        return "Tienda{" +
+                "nombre='" + nombre + '\'' +
+                ", objetosDisponibles=" + objetosDisponibles +
+                '}';
+    }
+
     public void mostrarDisponibles(){
         //objetos disponiblres
         System.out.println("Los objetos disponibles son: ");

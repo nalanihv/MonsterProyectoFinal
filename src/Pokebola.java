@@ -33,5 +33,10 @@ public class Pokebola extends Objeto{
      */
 
 
-
+    @Override
+    public String toString() {
+        return "Pokebola{" +
+                "efectividad=" + efectividad +
+                '}';
+    }
 }

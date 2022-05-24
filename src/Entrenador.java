@@ -194,6 +194,18 @@ metodo:
 
         return false;
     }
+
+    @Override
+    public String toString() {
+        return "Entrenador{" +
+                "region='" + region + '\'' +
+                ", pokemonMascota=" + pokemonMascota +
+                ", torneosGanados=" + torneosGanados +
+                ", pokedex=" + pokedex +
+                ", mochila=" + mochila +
+                ", dinero=" + dinero +
+                '}';
+    }
     /*
 
     metodo:

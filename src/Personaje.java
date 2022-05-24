@@ -24,7 +24,17 @@ public abstract class Personaje {
         this.nivel = nivel;
         this.genero = genero;
     }
-public abstract boolean pelear(Pokemon pokemon);
+
+    @Override
+    public String toString() {
+        return "Personaje{" +
+                "nombre='" + nombre + '\'' +
+                ", nivel=" + nivel +
+                ", genero=" + genero +
+                '}';
+    }
+
+    public abstract boolean pelear(Pokemon pokemon);
 //getter, setter y contructor falta
     //nombre - string protected
     //nivel- int protected

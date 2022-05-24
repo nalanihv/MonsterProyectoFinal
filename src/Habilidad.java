@@ -34,4 +34,12 @@ public class Habilidad {
         this.ataqueBase = ataqueBase;
     }
 
+    @Override
+    public String toString() {
+        return "Habilidad{" +
+                "nombre='" + nombre + '\'' +
+                ", descripcion='" + descripcion + '\'' +
+                ", ataqueBase=" + ataqueBase +
+                '}';
+    }
 }
