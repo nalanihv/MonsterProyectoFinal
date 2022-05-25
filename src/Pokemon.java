@@ -95,7 +95,6 @@ public class Pokemon extends Personaje {
         return false;
     }while (pokemon.getHp()<0);*/
 
-
         if(this.fuerteContra.equals(pokemonOpuesto.getTipo())){
             this.habilidad.setAtaqueBase(this.habilidad.getAtaqueBase()+30);
             pokemonOpuesto.getHabilidad().setAtaqueBase(pokemonOpuesto.getHabilidad().getAtaqueBase()-20);
@@ -103,7 +102,6 @@ public class Pokemon extends Personaje {
         }else if (pokemonOpuesto.getFuerteContra().equals(this.tipo)){
             this.habilidad.setAtaqueBase(this.habilidad.getAtaqueBase()-30);
             pokemonOpuesto.getHabilidad().setAtaqueBase(pokemonOpuesto.getHabilidad().getAtaqueBase()+20);
-
 
         }else {}
         do {
