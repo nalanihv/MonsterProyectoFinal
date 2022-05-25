@@ -72,9 +72,8 @@ public class Pokemon extends Personaje {
 
 
     @Override
-    public boolean pelear(Pokemon pokemon) {
-       int ataque;
-
+    public boolean pelear(Pokemon pokemonOpuesto) {
+      /* int ataque;
         if(pokemon.fuerteContra ==pokemon.tipo){
             this.habilidad.getAtaqueBase();
             pokemon.getHabilidad().getNombre();
@@ -92,15 +91,44 @@ public class Pokemon extends Personaje {
             pokemon.getHabilidad().getAtaqueBase();
             pokemon.setHp(this.getHp()+20);
             this.setHp(this.getHp()-20);
-
-
         }
-
-
-
         return false;
-    }while (pokemon.getHp()<0);
+    }while (pokemon.getHp()<0);*/
 
+
+        if(this.fuerteContra.equals(pokemonOpuesto.getTipo())){
+            this.habilidad.setAtaqueBase(this.habilidad.getAtaqueBase()+30);
+            pokemonOpuesto.getHabilidad().setAtaqueBase(pokemonOpuesto.getHabilidad().getAtaqueBase()-20);
+
+        }else if (pokemonOpuesto.getFuerteContra().equals(this.tipo)){
+            this.habilidad.setAtaqueBase(this.habilidad.getAtaqueBase()-30);
+            pokemonOpuesto.getHabilidad().setAtaqueBase(pokemonOpuesto.getHabilidad().getAtaqueBase()+20);
+
+
+        }else {}
+        do {
+            if (this.velocidad >= pokemonOpuesto.getVelocidad()) {//empiezp
+                 pokemonOpuesto.setHp(pokemonOpuesto.getHp() - this.habilidad.getAtaqueBase());//golpe
+                if (pokemonOpuesto.getHp() <= 0) {//gano
+                    return true;
+                } else {
+                    this.hp -= pokemonOpuesto.getHabilidad().getAtaqueBase();
+                    if (this.hp <= 0) {
+                        return false;
+                    }
+                }
+            } else {//opuesto
+                this.hp -= pokemonOpuesto.getHabilidad().getAtaqueBase();
+                if (this.hp <= 0) {
+                    return false;
+                } else {
+                    pokemonOpuesto.setHp(pokemonOpuesto.getHp() - this.habilidad.getAtaqueBase());//golpe
+                     if (pokemonOpuesto.getHp() <= 0) {//pierdo
+                         return true;
+                    }
+                }
+            }
+        }while (true);
     }
 
     /*
