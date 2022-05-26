@@ -9,8 +9,15 @@ public class Main {
         miTienda.mostrarDisponibles();
         System.out.println(miTienda.usuarioComprar(30.3,1,0));
         miTienda.usuarioVender(pocion1,4);
-
         //agregar tostring a las clases
+
+    }
+
+    public class Main implements UtilInterface{
+        static ArrayList<Habilidad> habilidads=new ArrayList<>();
+        static Habilidad habilidad;
+
+
     }
 
 }
