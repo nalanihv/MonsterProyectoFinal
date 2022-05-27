@@ -10,3 +10,5 @@ public interface UtilInterface {
     String[]debilFuerteAleatorio(String tipo);
     String[]nombreAleatorio(String tipo);
 }
+
+
