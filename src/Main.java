@@ -1,6 +1,9 @@
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.ArrayList;
 
 public class Main {
+    
     public static void main(String[] args) {
         ArrayList<Objeto>paraTienda=new ArrayList<>();
         Pocion pocion1=new Pocion(30.3,2,"pocion vida","vida","dar vida",10);
