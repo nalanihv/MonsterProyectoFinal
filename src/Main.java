@@ -1,8 +1,9 @@
 import org.w3c.dom.ls.LSOutput;
-
+import java.util.Scanner;
+import static java.lang.System.currentTimeMillis;
 import java.util.ArrayList;
 
-public class Main {
+/*public class Main {
 
     public static void main(String[] args) {
         ArrayList<Objeto> paraTienda = new ArrayList<>();
@@ -17,18 +18,28 @@ public class Main {
         Habilidad habilidad = new Habilidad();
 
     }
-}
+}*/
 
 
-    public class  Main implements UtilInterface{
+    public class  Main implements UtilInterface{ 
+        static ArrayList<Habilidad>habilidades= new ArrayList<>();
+        public static void main(String[] args) {
+        long tiempoinicial = currentTimeMillis();
+         tiempojugado(tiempoinicial,currentTimeMillis());//?
+         } 
+        
         @Override
         public void tiempoJugado(long tiempoInicial, long tiempoFinal) {
-           long tiempoJugado=System.currentTimeMillis();
-            return ;
+              System.out.println(tiempoInicial-tiempoFinal);
+           //long tiempoJugado=System.currentTimeMillis();
+            //return ;
         }
 
         @Override
         public void mostrarMenu() {
+            System.out.println("");
+            System.out.println("");
+            System.out.println("");
 
         }
 
@@ -43,7 +54,8 @@ public class Main {
         }
 
         @Override
-        public String[] debilFuerteAleatorio(String tipo) {
+        public String[] debilFuerteAleatorio(String tipo)
+         String[] cosa= new String[0];{
             return new String[0];
         }
 
