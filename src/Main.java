@@ -56,6 +56,21 @@ import java.util.ArrayList;
 
         @Override
         public <G> G sacarAleatorio(ArrayList<G> arrayList) {
+           /* String[] banco= new String[4];
+            switch (banco[4]){
+                case "agua":
+                    banco[0]="";
+                    break;
+                case "fuego":
+                    banco[1]="";
+                    break;
+                case "planta":
+                    banco[2]="";
+                    break;
+                case "tierra":
+                    banco[4]="";
+            }*/
+
             return null;
         }
 
@@ -63,10 +78,15 @@ import java.util.ArrayList;
         public String[] debilFuerteAleatorio(String tipo) {
             String[] arreglo=new String[2];
 
-            switch (arreglo[2]){
+            switch ( tipo){
+
                 case "agua":
+                    arreglo[0]="electrico";
+                    arreglo[1]="fuego";
                     break;
                 case "fuego":
+                    arreglo[0]="agua";
+                    arreglo[1]="bicho";
                     break;
 
             }
