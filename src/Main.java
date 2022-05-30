@@ -88,6 +88,13 @@ import java.util.ArrayList;
                     arreglo[0]="agua";
                     arreglo[1]="bicho";
                     break;
+                case "bicho":
+                    arreglo[0]="";
+                    arreglo[1]="";
+                case "electrico":
+                    arreglo[0]="";
+                    arreglo[1]="";
+
 
             }
             return new String[0];
