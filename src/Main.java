@@ -48,6 +48,7 @@ import java.util.ArrayList;
 
         @Override
         public Pokemon crearPokemon() {
+            System.out.println();
             return null;
         }
 
