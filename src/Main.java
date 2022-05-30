@@ -1,11 +1,10 @@
 import org.w3c.dom.ls.LSOutput;
-import java.util.Scanner;
-import static java.lang.System.currentTimeMillis;
+
 import java.util.ArrayList;
 
-/*public class Main {
+//public class Main {
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         ArrayList<Objeto> paraTienda = new ArrayList<>();
         Pocion pocion1 = new Pocion(30.3, 2, "pocion vida", "vida", "dar vida", 10);
         paraTienda.add(pocion1);
@@ -20,26 +19,30 @@ import java.util.ArrayList;
     }
 }*/
 
-
-    public class  Main implements UtilInterface{ 
-        static ArrayList<Habilidad>habilidades= new ArrayList<>();
+    public class  Main implements UtilInterface{
+        static ArrayList<Habilidad> habilidades = new ArrayList<>();
         public static void main(String[] args) {
-        long tiempoinicial = currentTimeMillis();
-         tiempojugado(tiempoinicial,currentTimeMillis());//?
-         } 
-        
+            long tiempoIncicial= System.currentTimeMillis();
+            //tiempoJugado(tiempoIncicial,currentTimeMillis())
+
+        }
+
         @Override
         public void tiempoJugado(long tiempoInicial, long tiempoFinal) {
-              System.out.println(tiempoInicial-tiempoFinal);
+            //long  tiempoJugado(tiempoIncicial-tiempoFinal);
            //long tiempoJugado=System.currentTimeMillis();
-            //return ;
+            return ;
         }
 
         @Override
         public void mostrarMenu() {
-            System.out.println("");
-            System.out.println("");
-            System.out.println("");
+            System.out.println("1. explorar");
+            System.out.println("2. entrar a tienda");
+            System.out.println("3.tirar objeto");
+            System.out.println("4. ver estadisticas");
+            System.out.println("5. tiempo jugado ");
+
+
 
         }
 
@@ -54,8 +57,7 @@ import java.util.ArrayList;
         }
 
         @Override
-        public String[] debilFuerteAleatorio(String tipo)
-         String[] cosa= new String[0];{
+        public String[] debilFuerteAleatorio(String tipo) {
             return new String[0];
         }
 
