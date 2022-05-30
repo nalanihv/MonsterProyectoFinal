@@ -48,7 +48,9 @@ import java.util.ArrayList;
 
         @Override
         public Pokemon crearPokemon() {
+
             System.out.println();
+
             return null;
         }
 
@@ -59,12 +61,36 @@ import java.util.ArrayList;
 
         @Override
         public String[] debilFuerteAleatorio(String tipo) {
+            String[] arreglo=new String[2];
+
+            switch (arreglo[2]){
+                case "agua":
+                    break;
+                case "fuego":
+                    break;
+
+            }
             return new String[0];
         }
 
         @Override
         public String[] nombreAleatorio(String tipo) {
-            return new String[0];
+            String[] banco= new String[4];
+            switch (banco[4]){
+                case "agua":
+                    banco[0]="";
+                    break;
+                case "fuego":
+                    banco[1]="";
+                    break;
+                case "planta":
+                        banco[2]="";
+                        break;
+                case "tierra":
+                    banco[4]="";
+            }
+
+            return banco;
         }
 
 
