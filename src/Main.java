@@ -81,8 +81,8 @@ import java.util.ArrayList;
             switch ( tipo){
 
                 case "agua":
-                    arreglo[0]="electrico";
-                    arreglo[1]="fuego";
+                    arreglo[0]="electrico"; //debil
+                    arreglo[1]="fuego";//fuerte
                     break;
                 case "fuego":
                     arreglo[0]="agua";
@@ -98,16 +98,29 @@ import java.util.ArrayList;
             String[] banco= new String[4];
             switch (banco[4]){
                 case "agua":
-                    banco[0]="";
+                    banco[0]="squitle";
+                    banco[1]="magicarp";
+                    banco[2]="Gyarados";
+                    banco[3]="seaking";
+
                     break;
                 case "fuego":
-                    banco[1]="";
+                    banco[0]="charmander";
+                    banco[1]="rapidash";
+                    banco[2]="growthe";//<3
+                    banco[3]="arcanine";
                     break;
                 case "planta":
-                        banco[2]="";
+                    banco[0]="roselia";
+                    banco[1]="Petilli";
+                    banco[2]="Bellossom";
+                    banco[3]="roserade";
                         break;
                 case "tierra":
-                    banco[4]="";
+                    banco[0]="drilbur";
+                    banco[1]="excadrill";
+                    banco[2]="Sandshrew";
+                    banco[3]="krokorok";
             }
 
             return banco;
