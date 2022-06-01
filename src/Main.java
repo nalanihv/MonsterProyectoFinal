@@ -36,7 +36,7 @@ import java.util.Scanner;
             habilidades.add(habilidad);
             habilidades.add(habilidad2);
             habilidades.add(habilidad3);
-            tiposPokemon=new ArrayList<>(Arrays.asList("agua","fuego","tierra","electrico","planta"));
+            tiposPokemon=new ArrayList<>(Arrays.asList("agua","fuego","tierra","electrico","planta"));//..etc
             Main objetoMain= new Main();
             //mostrar menu. con while?==0, muestro menu, usario escoje
             //explorar= while para seguir observando
