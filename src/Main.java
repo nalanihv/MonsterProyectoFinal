@@ -114,21 +114,12 @@ import java.util.Scanner;
         @Override
         public <G> G sacarAleatorio(ArrayList<G> arrayList) {
             Random random=new Random();
-            //int indice=random.;
-           /* String[] banco= new String[4];
-            switch (banco[4]){
-                case "agua":
-                    banco[0]="";
-                    break;
-                case "fuego":
-                    banco[1]="";
-                    break;
-                case "planta":
-                    banco[2]="";
-                    break;
-                case "tierra":
-                    banco[4]="";
-            }*/
+             Random random = new Random();
+        int indice = random.nextInt(0,arrayList.size()-1);
+        return arrayList.get(indice);
+            
+            
+    
 
             return null;
         }
