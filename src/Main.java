@@ -1,6 +1,8 @@
 import org.w3c.dom.ls.LSOutput;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Random;
 
 //public class Main {
 
@@ -21,15 +23,28 @@ import java.util.ArrayList;
 
     public class  Main implements UtilInterface{
         static ArrayList<Habilidad> habilidades = new ArrayList<>();
+        static Habilidad habilidad=new Habilidad("patada voladora","da una patada",60);
+        static Habilidad habilidad2=new Habilidad("puño volador","dar un puño",30);
+        static Habilidad habilidad3=new Habilidad("cachetada", "dar una chachetada",15);
+        static ArrayList<String>tiposPokemon;
+
+
         public static void main(String[] args) {
             long tiempoIncicial= System.currentTimeMillis();
             //tiempoJugado(tiempoIncicial,currentTimeMillis())
+
+            habilidades.add(habilidad);
+            habilidades.add(habilidad2);
+            habilidades.add(habilidad3);
+            tiposPokemon=new ArrayList<>(Arrays.asList("agua","fuego","tierra","electrico","planta"));
 
         }
 
         @Override
         public void tiempoJugado(long tiempoInicial, long tiempoFinal) {
-            //long  tiempoJugado(tiempoIncicial-tiempoFinal);
+            System.out.println(" "+(tiempoInicial-tiempoFinal));
+
+            // tiempoJugado(tiempoIncicial-tiempoFinal);
            //long tiempoJugado=System.currentTimeMillis();
             return ;
         }
@@ -47,7 +62,9 @@ import java.util.ArrayList;
         }
 
         @Override
-        public Pokemon crearPokemon() {
+        public Pokemon crearPokemon(/*Habilidad habilidad,String tipo*/) {
+            Random random=new Random();
+            int nombre;
 
             System.out.println();
 
@@ -56,6 +73,8 @@ import java.util.ArrayList;
 
         @Override
         public <G> G sacarAleatorio(ArrayList<G> arrayList) {
+            Random random=new Random();
+            //int indice=random.;
            /* String[] banco= new String[4];
             switch (banco[4]){
                 case "agua":
