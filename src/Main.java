@@ -29,7 +29,7 @@ import java.util.Random;
         static ArrayList<String>tiposPokemon;
 
 
-        public static void main(String[] args) {
+        public static void main(String[] args) throws InterruptedException {
             long tiempoIncicial= System.currentTimeMillis();
             //tiempoJugado(tiempoIncicial,currentTimeMillis())
 
@@ -38,16 +38,23 @@ import java.util.Random;
             habilidades.add(habilidad3);
             tiposPokemon=new ArrayList<>(Arrays.asList("agua","fuego","tierra","electrico","planta"));
 
+            Thread.sleep(1500);
+            Main objetoMain= new Main();
+            //tamar tiempo jugado
+            objetoMain.tiempoJugado(tiempoIncicial,System.currentTimeMillis());
+            System.out.println(objetoMain.crearPokemon());
+            System.out.println(objetoMain.crearPokemon());
+            System.out.println(objetoMain.crearPokemon());
+
         }
 
         @Override
         public void tiempoJugado(long tiempoInicial, long tiempoFinal) {
-            System.out.println(" "+(tiempoInicial-tiempoFinal));
+            System.out.println("has jugado "+(tiempoInicial-tiempoFinal)+" milisegundos");
 
             // tiempoJugado(tiempoIncicial-tiempoFinal);
            //long tiempoJugado=System.currentTimeMillis();
-             System.out.println("Llevas: " + (tiempoInicial - tiempoFinal));
-           
+            return ;
         }
 
         @Override
@@ -63,13 +70,24 @@ import java.util.Random;
         }
 
         @Override
-        public Pokemon crearPokemon(/*Habilidad habilidad,String tipo*/) {
+        public Pokemon crearPokemon() {
             Random random=new Random();
-            int nombre;
 
-            System.out.println();
+            int numTipo=random.nextInt(tiposPokemon.size());
+            String tipo=sacarAleatorio(tiposPokemon);
+            int tamNombre= nombreAleatorio(tipo).length;
+            int nombre= random.nextInt(tamNombre);
+            int hp=random.nextInt(200);
+            boolean legendario =random.nextBoolean();
+            String[] debilFuerte=debilFuerteAleatorio(tipo);
+            int fuerza=random.nextInt(200);
+            int velocidad =random.nextInt(200);
+            int numHabilidad=random.nextInt(habilidades.size());
+            String nombreFinal=nombreAleatorio(tipo)[nombre];
+            int nivel=random.nextInt(habilidades.size());
+            char genero=random.nextInt(15)< 5 ? 'f':'m'; //operador ternario
 
-            return null;
+            return new Pokemon(nombreFinal,nivel,genero,tipo,sacarAleatorio(habilidades),hp,legendario,debilFuerte[0],debilFuerte[1],fuerza,velocidad);
         }
 
         @Override
@@ -90,11 +108,8 @@ import java.util.Random;
                 case "tierra":
                     banco[4]="";
             }*/
-            Random random = new Random();
-        int indice = random.nextInt(0,arrayList.size()-1);
-        return arrayList.get(indice);
 
-            
+            return null;
         }
 
         @Override
@@ -111,11 +126,12 @@ import java.util.Random;
                     arreglo[0]="agua";
                     arreglo[1]="bicho";
                     break;
-             
+                case "bicho":
+                    arreglo[0]="";
+                    arreglo[1]="";
                 case "electrico":
-                    arreglo[0]="tierra";
-                    arreglo[1]="agua";
-                    break;
+                    arreglo[0]="";
+                    arreglo[1]="";
 
 
             }
