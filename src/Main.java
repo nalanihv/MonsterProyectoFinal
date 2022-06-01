@@ -31,7 +31,8 @@ import java.util.ArrayList;
         public void tiempoJugado(long tiempoInicial, long tiempoFinal) {
             //long  tiempoJugado(tiempoIncicial-tiempoFinal);
            //long tiempoJugado=System.currentTimeMillis();
-            return ;
+             System.out.println("Llevas: " + (tiempoInicial - tiempoFinal));
+           
         }
 
         @Override
@@ -70,8 +71,11 @@ import java.util.ArrayList;
                 case "tierra":
                     banco[4]="";
             }*/
+            Random random = new Random();
+        int indice = random.nextInt(0,arrayList.size()-1);
+        return arrayList.get(indice);
 
-            return null;
+            
         }
 
         @Override
@@ -88,12 +92,11 @@ import java.util.ArrayList;
                     arreglo[0]="agua";
                     arreglo[1]="bicho";
                     break;
-                case "bicho":
-                    arreglo[0]="";
-                    arreglo[1]="";
+             
                 case "electrico":
-                    arreglo[0]="";
-                    arreglo[1]="";
+                    arreglo[0]="tierra";
+                    arreglo[1]="agua";
+                    break;
 
 
             }
