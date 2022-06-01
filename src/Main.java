@@ -3,6 +3,7 @@ import org.w3c.dom.ls.LSOutput;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
+import java.util.Scanner;
 
 //public class Main {
 
@@ -32,14 +33,34 @@ import java.util.Random;
         public static void main(String[] args) throws InterruptedException {
             long tiempoIncicial= System.currentTimeMillis();
             //tiempoJugado(tiempoIncicial,currentTimeMillis())
-
             habilidades.add(habilidad);
             habilidades.add(habilidad2);
             habilidades.add(habilidad3);
             tiposPokemon=new ArrayList<>(Arrays.asList("agua","fuego","tierra","electrico","planta"));
+            Main objetoMain= new Main();
+            //mostrar menu. con while?==0, muestro menu, usario escoje
+            //explorar= while para seguir observando
+            int respuesta=1;
+            Scanner scanner=new Scanner(System.in);
+            while (respuesta!=0){
+                objetoMain.mostrarMenu();
+                System.out.println("elija una opcion ");
+                respuesta=scanner.nextInt();
+                if(respuesta==1){
+                    int dejarExplorar=1;
+                    while (dejarExplorar!=0){
+                        Thread.sleep(1500);
+                        System.out.println("aparecio un pokemon salvaje ");
+                        System.out.println(objetoMain.crearPokemon());
+                        System.out.println("quieres seguir explorando 1.si  0. no");
+                        //atrapar, pelear, dejar
+                        dejarExplorar=scanner.nextInt();
+                    }
+                }
+            }
+
 
             Thread.sleep(1500);
-            Main objetoMain= new Main();
             //tamar tiempo jugado
             objetoMain.tiempoJugado(tiempoIncicial,System.currentTimeMillis());
             System.out.println(objetoMain.crearPokemon());
