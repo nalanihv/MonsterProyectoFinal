@@ -83,12 +83,20 @@ metodo:
                  mochila.remove(respuesta - 1);
              }
         }while (respuesta !=0);*/
-         if(indice>mochila.size()-1){
+        /* if(indice>mochila.size()-1){
              return false;
          }else {
              mochila.remove(indice);
              return true;
-         }
+         }*/
+         try {
+            Mochila.remove(indice);
+            return true;
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println("Ese objeto no existe");
+            return false;
+        }
+        
     }
     public boolean intercambiar(ArrayList<Pokemon> mochilaOpuesto){
         System.out.println("Los objrtos disponibles son: ");
@@ -156,12 +164,26 @@ metodo:
          */
         ArrayList<Pokemon>paraPelea=new ArrayList<>();
        mostrarPokedex(pokedex);
-        System.out.println("Escoge 3 pokemones");
+       // System.out.println("Escoge 3 pokemones");
         Scanner scanner=new Scanner(System.in);
         for (int i = 0; i <3 ; i++) {
             System.out.println("ingresa el pokemon");
             paraPelea.add(pokedex.get(scanner.nextInt()-1));
+            try {
+                int indice = leer.nextInt();
+                parapelear.add(pokedex.get(indice - 1));
+            }catch(InputMismatchException e){
+                System.out.println("Ingrese un numero");
+                leer.nextLine();
+                i--;
+            } catch (IndexOutOfBoundsException e) {
+                System.out.println("El pokemon no existe, ingrese uno  existente");
+                i--;
+            }
         }
+        
+        
+        
         //mostra pokedex, usuario escoje 3 y agregan a paraPelear
         int respuesta=0;
         do{
