@@ -30,6 +30,7 @@ public class Tienda {
 
     public boolean usuarioComprar(double dinero, int cantidad, int indiceObjeto){
         
+        try {
         if(indiceObjeto>objetosDisponibles.size()){
             System.out.println("Error no existe ese objeto");
             return false;
@@ -48,6 +49,9 @@ public class Tienda {
                 System.out.println("No tenemos la cantidad solicitada");
                 return false;
             }
+          }catch (IndexOutOfBoundsException e){
+            System.out.println("El objeto no existe");
+            return false;
         }
         /* validad que haya suficientes objetos del tipo requerido :
         cantidad y existe en el arreglo
